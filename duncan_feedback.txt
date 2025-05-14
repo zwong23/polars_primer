@@ -1,0 +1,50 @@
+
+Liked the tables, formatting, text, and concise and to the point 
+
+keep it short
+
+keep it early in the noteboo 
+
+
+Syntax:
+
+1. add parantheical and break everything onto a new line
+
+Substance:
+
+
+1. Showcase how to store filter expressions outside context of dataset - like pandas mask - filter dictionary  
+
+in_usa = pl.col('col').isin(['usa'])
+pl_usa = pl.filter(in_usa)
+
+2. Difference between expressions and contexts - in Duncan's memmo
+Same expression in different contexts with different results
+select vs filter vs withColumns (in usa) - will return different things 
+
+3. Expression expansion - include expression expansions
+sum columns with same pattern - specify regex pattern and show some ways that can enable compact polars code
+Example: trim alot of columns - lf.withColumns(cs.string()) - selects all string column and trim - expression expansion
+more scalable
+
+4. polars can also check uniqueness of a column - like is_id
+
+5. another warning at the bottom to kill the kernel 
+
+6. Difference between collect, collect(engine = streaming), streaming 
+
+7. Lazy collects as well
+
+7. Include tests on 10s of GB, usaspending.gov
+Benchmark speed on different operations
+Do a groupby and total award amount by year 
+Other aggregations, filters/groupby/aggregation, window type operations 
+Do streaming for polars (sink_csv) vs stata (best stata code) and write to csv
+Benchmarking: 
+1. Restrict polars to 8 threads (stata can max use 8 threads)
+2. Let Polars use 16 
+Put together a visualization - 3 bars for each benchmark
+Seconds - runtime on y axis 
+
+
+
